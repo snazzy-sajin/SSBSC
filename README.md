@@ -51,30 +51,31 @@ Model Waveform
 <img width="704" height="178" alt="image" src="https://github.com/user-attachments/assets/32ee29b3-0d95-4192-9762-972d50c05c90" />
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
-Program<br>
-Am=6.7;<br>
-fm=529;<br>
-Ac=13.2;<br>
-fc=5290;<br>
-fs=52900;<br>
-t=0:1/fs:2/fm;<br>
-m1=Am*cos(2*%pi*fm*t);<br>
-subplot(4,1,1);<br>
-plot(t,m1);<br>
-c1=Ac*cos(2*%pi*fc*t);<br>
-subplot(4,1,2);<br>
-plot(t,c1);<br>
-m2=Am*cos(1.57-(2*%pi*fm*t));<br>
-c2=Ac*cos(1.57-(2*%pi*fc*t));<br>
-s1=c1.*m1;<br>
-s2=c2.*m2;<br>
-lsb=s1+s2;<br>
-subplot(4,1,3);<br>
-plot(t,lsb);<br>
-usb=s1-s2;<br>
-subplot(4,1,4);<br>
-plot(t,usb);<br>
-
+Program
+```
+Am=6.7;
+fm=529;
+Ac=13.2;
+fc=5290;
+fs=52900;
+t=0:1/fs:2/fm;
+m1=Am*cos(2*%pi*fm*t);
+subplot(4,1,1);
+plot(t,m1);
+c1=Ac*cos(2*%pi*fc*t);
+subplot(4,1,2);
+plot(t,c1);
+m2=Am*cos(1.57-(2*%pi*fm*t));
+c2=Ac*cos(1.57-(2*%pi*fc*t));
+s1=c1.*m1;
+s2=c2.*m2;
+lsb=s1+s2;
+subplot(4,1,3);
+plot(t,lsb);
+usb=s1-s2;
+subplot(4,1,4);
+plot(t,usb);
+```
 OUTPUT WAVEFORM
 <img width="1563" height="992" alt="image" src="https://github.com/user-attachments/assets/7782ff80-2260-42cd-b04f-684384b34700" />
 
